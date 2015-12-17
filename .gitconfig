@@ -1,0 +1,27 @@
+[user]
+	email = david.zok@invision.de
+	name = David Zok
+[core]
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
+[merge]
+	tool = vimdiff
+[alias]
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[pull]
+	rebase = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
