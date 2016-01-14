@@ -50,6 +50,7 @@ set wildignore+=*/bower_components/*
 set wildignore+=*/tmp/*
 set wildignore+=*/elm-stuff/*
 set wildignore+=*/deps/*
+set wildignore+=*/rel/*
 
 noremap <up> <NOP>
 noremap <down> <NOP>
