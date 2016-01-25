@@ -20,7 +20,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'janko-m/vim-test'
 Plugin 'bodymindarts/vim-twitch'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'lambdatoast/elm.vim'
+Plugin 'elmcast/elm-vim'
 
 call vundle#end()
 syntax enable
