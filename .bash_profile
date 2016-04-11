@@ -7,6 +7,10 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export GOPATH=~/dev/go
 export PATH=$PATH:~/dev/go/bin
+export DOCKER_HOST=tcp://192.168.99.100:2376
+export DOCKER_CERT_PATH=/Users/davidzok/.docker/machine/machines/dinghy
+export DOCKER_TLS_VERIFY=1
+export DOCKER_MACHINE_NAME=dinghy
 
 if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
