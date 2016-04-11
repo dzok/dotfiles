@@ -10,7 +10,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'altercation/vim-colors-solarized'
@@ -18,7 +20,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-sensible'
 Plugin 'janko-m/vim-test'
-Plugin 'bodymindarts/vim-twitch'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'elmcast/elm-vim'
 
@@ -69,8 +70,8 @@ map <Leader>t :TestNearest<CR>
 map <Leader>r :TestFile<CR>
 map <Leader>a :TestSuite<CR>
 
-map <Leader>gt :Twitch<CR>
-map <Leader>vgt :VTwitch<CR>
+map <Leader>bn :bn<CR>
+map <Leader>bp :bp<CR>
 
 set background=light
 colorscheme solarized
@@ -79,6 +80,8 @@ let g:vim_json_syntax_conceal = 0
 let &colorcolumn = 81
 
 let g:airline_section_b = '%{fnamemodify(getcwd(), '':t'')} > %{airline#extensions#branch#head()}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 if executable('pt')
   let g:ackprg = 'pt'
