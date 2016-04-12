@@ -70,8 +70,11 @@ map <Leader>t :TestNearest<CR>
 map <Leader>r :TestFile<CR>
 map <Leader>a :TestSuite<CR>
 
-map <Leader>bn :bn<CR>
-map <Leader>bp :bp<CR>
+let g:buffergator_suppress_keymaps = 1
+map <Leader>bg :BuffergatorToggle<CR>
+map <Leader>bb :bn<CR>
+map <Leader>bB :bp<CR>
+map <Leader>bd :bd<CR>
 
 set background=light
 colorscheme solarized
