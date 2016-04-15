@@ -1,3 +1,5 @@
+set -o vi
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 eval "$(rbenv init -)"
