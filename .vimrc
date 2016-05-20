@@ -36,7 +36,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
-let mapleader = ","
+let mapleader = " "
 set number
 set nowrap
 set tabstop=2
