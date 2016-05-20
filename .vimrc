@@ -66,6 +66,7 @@ map <Leader>gl :Glog<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
+let test#strategy = "neovim"
 map <Leader>t :TestNearest<CR>
 map <Leader>r :TestFile<CR>
 map <Leader>a :TestSuite<CR>
