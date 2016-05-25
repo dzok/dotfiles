@@ -59,7 +59,6 @@ noremap <down> <NOP>
 noremap <left> <NOP>
 noremap <right> <NOP>
 map <Leader>cc <plug>NERDCommenterToggle<CR>
-imap <Leader>cc <Esc><plug>NERDCommenterToggle<CR>i
 map <Leader>gb :Gblame<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gd :Gdiff<CR>
