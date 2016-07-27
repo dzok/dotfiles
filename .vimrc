@@ -23,6 +23,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'janko-m/vim-test'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'elmcast/elm-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 syntax enable
@@ -86,6 +88,8 @@ let &colorcolumn = 81
 let g:airline_section_b = '%{fnamemodify(getcwd(), '':t'')} > %{airline#extensions#branch#head()}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:jsx_ext_required = 0
 
 if executable('pt')
   let g:ackprg = 'pt'
