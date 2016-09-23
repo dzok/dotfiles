@@ -1,34 +1,29 @@
-set nocompatible
-filetype off
 let $LANG = 'en'
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'mileszs/ack.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'kchmck/vim-coffee-script'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-sensible'
+Plug 'janko-m/vim-test'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elmcast/elm-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+call plug#end()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-sensible'
-Plugin 'janko-m/vim-test'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'elmcast/elm-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-
-call vundle#end()
 syntax enable
-filetype plugin indent on
 
 augroup reload_vimrc " {
     autocmd!
