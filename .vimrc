@@ -74,6 +74,8 @@ map <Leader>bb :bn<CR>
 map <Leader>bB :bp<CR>
 map <Leader>bd :bd<CR>
 
+set mouse=a
+
 set background=light
 colorscheme solarized
 
