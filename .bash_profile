@@ -1,7 +1,7 @@
 set -o vi
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 eval "$(rbenv init -)"
 eval "$(direnv hook bash)"
 export PATH="/opt/chefdk/bin:$PATH"
@@ -9,10 +9,8 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export GOPATH=~/dev/go
 export PATH=$PATH:~/dev/go/bin
-export DOCKER_HOST=tcp://192.168.99.100:2376
-export DOCKER_CERT_PATH=/Users/davidzok/.docker/machine/machines/dinghy
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME=dinghy
+export PATH="$PATH:$HOME/.yarn/bin"
+source /usr/local/opt/asdf/asdf.sh
 
 if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
@@ -42,7 +40,7 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_DARKGRAY[$C_RED\$(rbenv version-name)$C_DARKGRAY] \$(vcprompt -f '$C_DARKGRAY[$C_GREEN%n:%b%m%u$C_DARKGRAY] ')$C_PURPLE\u$C_DARKGRAY @ $C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
+export PS1="\n$C_DARKGRAY[$C_RED\$(exenv version-name)$C_DARKGRAY] \$(vcprompt -f '$C_DARKGRAY[$C_GREEN%n:%b%m%u$C_DARKGRAY] ')$C_PURPLE\u$C_DARKGRAY @ $C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
 
 export CLICOLOR=1
 
@@ -51,10 +49,14 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 alias ll="ls -la"
-#alias vim="/usr/local/Cellar/vim/HEAD/bin/vim"
-#alias vi="/usr/local/Cellar/vim/HEAD/bin/vim"
 alias vim="/usr/local/bin/nvim"
 alias vi="/usr/local/bin/nvim"
 alias please='sudo $(history -p \!\!)'
 alias rstart='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'
 alias rstop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'
+alias wow='git status'
+alias such='git'
+alias very='git'
+alias plz='git'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
