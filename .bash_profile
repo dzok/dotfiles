@@ -2,17 +2,12 @@ set -o vi
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-eval "$(rbenv init -)"
 eval "$(direnv hook bash)"
 export PATH="/opt/chefdk/bin:$PATH"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 export GOPATH=~/dev/go
 export PATH=$PATH:~/dev/go/bin
 export PATH="$PATH:$HOME/.yarn/bin"
 source /usr/local/opt/asdf/asdf.sh
-
-if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
@@ -40,7 +35,7 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\n$C_DARKGRAY[$C_RED\$(exenv version-name)$C_DARKGRAY] \$(vcprompt -f '$C_DARKGRAY[$C_GREEN%n:%b%m%u$C_DARKGRAY] ')$C_PURPLE\u$C_DARKGRAY @ $C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
+export PS1="\n$C_DARKGRAY\$(vcprompt -f '$C_DARKGRAY[$C_GREEN%n:%b%m%u$C_DARKGRAY] ')$C_PURPLE\u$C_DARKGRAY @ $C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
 
 export CLICOLOR=1
 
