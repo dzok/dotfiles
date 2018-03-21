@@ -7,7 +7,8 @@ export PATH="/opt/chefdk/bin:$PATH"
 export GOPATH=~/dev/go
 export PATH=$PATH:~/dev/go/bin
 export PATH="$PATH:$HOME/.yarn/bin"
-source /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
