@@ -17,7 +17,7 @@ zplug load
 
 NEWLINE=$'\n'
 
-export PS1='${NEWLINE}$(gitprompt)%n@%m : %~${NEWLINE}$ '
+export PROMPT='${NEWLINE}$(gitprompt)%F{blue}%n@%m%f : %F{black}%~%f${NEWLINE}$ '
 
 export CLICOLOR=1
 
