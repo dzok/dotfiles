@@ -3,6 +3,7 @@
 	name = David Zok
 [core]
 	editor = vim
+	excludesfile = /Users/davidzok/.gitignore_global
 [color]
 	ui = true
 [push]
