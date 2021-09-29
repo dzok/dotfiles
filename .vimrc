@@ -4,7 +4,9 @@ Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'dense-analysis/ale'
+" Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
+" Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jeetsukumaran/vim-buffergator'
@@ -57,11 +59,11 @@ noremap <down> <NOP>
 noremap <left> <NOP>
 noremap <right> <NOP>
 map <Leader>cc <plug>NERDCommenterToggle<CR>
-map <Leader>gb :Gblame<CR>
-map <Leader>gs :Gstatus<CR>
-map <Leader>gd :Gdiff<CR>
-map <Leader>gl :Glog<CR>
-map <Leader>gc :Gcommit<CR>
+map <Leader>gb :Git blame<CR>
+map <Leader>gs :Git status<CR>
+map <Leader>gd :Git diff<CR>
+map <Leader>gl :Git log<CR>
+map <Leader>gc :Git commit<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
 let test#strategy = "neovim"
@@ -92,21 +94,19 @@ let g:jsx_ext_required = 0
 set statusline+=%#warningmsg#
 set statusline+=%*
 
-let g:ale_open_list = 1
-let g:ale_linters = { 'javascript': ['eslint'] }
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
+" BEGIN COC config
+set updatetime=100
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+" END COC config
 
 let g:test#javascript#jest#file_pattern = '\v(__(test|tests|integrationtests)__/.*|(spec|unit|test|integration))\.(js|jsx|coffee|ts|tsx)$'
 " let g:test#javascript#jest#file_pattern = '.(js|jsx|coffee|ts|tsx)'
-let g:test#javascript#jest#executable = 'npx jest --config=jest.json --maxWorkers=1'
+let g:test#javascript#jest#executable = 'npx jest --config=jest.config.json --maxWorkers=1'
 
 let NERDTreeShowHidden=1
 
